@@ -164,6 +164,12 @@ namespace SecureTradingApi.Services
 
             return json;
         }
+
+        public async Task<CheckCardResponseModel> AccountCheck(CheckCardRequestModel innerRequest)
+        {
+            innerRequest.SiteReference = _config.SiteReference;
+            return await RequestAsync<CheckCardRequestModel, CheckCardResponseModel>(innerRequest);
+        }
         #endregion
     }
 }

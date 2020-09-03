@@ -5,6 +5,8 @@ namespace SecureTradingApi.Services
 {
     public interface ISecureTradingClient
     {
+        Task<CheckCardResponseModel> AccountCheck(CheckCardRequestModel request);
+
         Task<TransactionQueryResponseModel> QueryAsync(TransactionQueryRequestModel request);
         Task<AuthResponseModel> AuthAsync(AuthRequestModel request);
         Task<RefundResponseModel> PayoutAsync(PayoutRequest request);
