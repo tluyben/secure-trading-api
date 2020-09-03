@@ -20,7 +20,7 @@ namespace SecureTradingApi.Models
         public string Issuer { get; set; }
 
         [JsonProperty("dccenabled")]
-        public int DccEnabled { get; set; }
+        public string DccEnabled { get; set; }
 
         [JsonProperty("settleduedate")]
         public DateTime SettleDueDate { get; set; }
